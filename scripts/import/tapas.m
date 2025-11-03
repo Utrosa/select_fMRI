@@ -1,7 +1,7 @@
 function tapas(homePath, subID, sesID, project, task)
 
     % Set up paths to raw DICOM files and compatible physio data.
-    dcmPath    = sprintf('%s/data_MRI/sourcedata/dicoms/%02d_%s_%02d/', homePath, sesID, project, subID);
+    dcmPath    = sprintf('%s/data_MRI/sourcedata/dicoms/sub-%02d_ses-%02d_%s/', homePath, subID, sesID, project);
     biopacPath = sprintf('%s/data_physio/raw/', homePath);
 
     % Load data
@@ -17,6 +17,7 @@ function tapas(homePath, subID, sesID, project, task)
     names = {localizerDir.name};
     for i = 1:length(names)
         name = names{i};
+
         % Remove the last 3 characters
         SeriesDescription = regexprep(name, '_\d+$', '');
     
