@@ -11,7 +11,7 @@ source activate localizer_fMRI
 # Subject-specific parameters
 subID=3
 sesID=2
-project="SUBCORT_HIGHRES"
+project="SubCort_HighRes"
 task="localizer"
 homePath='/home/mutrosa/Documents/projects/localizer_fMRI'
 

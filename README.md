@@ -19,7 +19,7 @@ All scripts ran by main_xxx.sh are located in .../scripts except for fMRIprep pr
 	.txt files from Expyriment in BIDS data_logs/bids
 	--> These folders are untouched by next steps to ensure replicable pipeline.
 2. Check that data is complete and correctly named. You may need to generate sidecar files for this (see next step).
-3. Run pre_import.py to generate sidecar files which are necesary to correctly set up the configuration files for BIDSifying MRI data. The configuration json file doesn't have to include the headscout, phoenix ZIP reports, and phasic images.
+3. Run pre_import.py to generate sidecar files which are necesary to correctly set up the configuration files for BIDSifying MRI data. The configuration doesn't have to include the headscouts and the phoenix ZIP report.
 4. Add "dataset_description.json" file to data_MRI/sourcedata/raw
 5. Run [BIDS Validator](http://bids.neuroimaging.io/tools/validator.html) on the dataset to ensure compliance to [the BIDS specification](https://bids-specification.readthedocs.io/en/stable/).
 
