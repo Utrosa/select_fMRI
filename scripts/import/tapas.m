@@ -70,11 +70,15 @@ function tapas(homePath, subID, sesID, project, task)
 
     % Display all the functional scans found for this participant.
     bids_names = {localizerDir.bids_name};
+
+    % Remove empty entries (0×0 double, '', missing, etc.)
+    bids_names = bids_names(~cellfun(@isempty, bids_names));
+
     fprintf('%d FUNCTIONAL SEQUENCES FOUND:\n%s\n', numel(bids_names), strjoin(bids_names, ',\n'));
 
     % Find the last DICOM file per functional scan.
     funcInfo = struct();
-    for i = 1:length(localizerDir)
+    for i = 1:length(bids_names)
         thisVolNum = 0;
         tmpDir = dir([localizerDir(i).folder '/' localizerDir(i).name '/']);
     
@@ -119,7 +123,7 @@ function tapas(homePath, subID, sesID, project, task)
     clear dicom; clear thisVolNum; clear thisDicom; clear numVal; clear ix;
     clear metadata; clear excludeDir; clear strTR; clear tmpDir;
     
-    %% LOOP THROUGH ALL FUNCTIONAL SEQUENCES ----------------------------------
+    %% LOOP THROUGH ALL FUNCTIONAL SEQUENCES ------------------------------
     for i = 1:length(funcInfo.TR)
 
         

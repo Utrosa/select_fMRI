@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-# Time-stamp: <2025-08-07 m.utrosa@bcbl.eu>
+# Time-stamp: <2025-11-03 m.utrosa@bcbl.eu>
 
 set -eo pipefail
 # -e => exits if any of the processes called generate a non-zero return code at the end.
@@ -9,36 +9,38 @@ set -eo pipefail
 source activate localizer_fMRI
 
 # Subject-specific parameters
-subID=1
-sesID=1
+subID=2
+sesID=2
 project="SubCort_HighRes"
 task="localizer"
 homePath='/home/mutrosa/Documents/projects/select_fMRI'
+# acq_list=("DresdenNoFat" "DresdenWFat" "ME1TR880" "ME3TR1600" "ME3TR1100" "ME3TR850" "ME3TR700")
+# "DresdenWFat175" 
+acq_list=("DresdenNoFat175" "ME1TR780" "ME3TR1180" "ME3TR770" "ME3TR680")
 
 # STEP 0
 ## Generate sidecar files to set up the configuration files.
 ## Run script pre_import.py in the terminal.
 
-# STEP 1: MRI
-## a.) BIDSifies sourcedata (dicoms).
-## b.) Removes background noise from MP2RAGE UNI images (T1w).
-## c.) Removes noise from functional scans using NORDIC [].
+# a.) BIDSifies sourcedata (dicoms).
+# b.) Removes background noise from MP2RAGE UNI images (T1w).
+# c.) Removes noise from functional scans using NORDIC.
 echo "STEP 1: Starting curation of MRI data ..."
-python -m scripts.import.import_MRI "$subID" "$sesID" "$project" "$homePath"
+python -m scripts.import.import_MRI "$subID" "$sesID" "$project" "$homePath" "${acq_list[@]}"
 echo "Completed STEP 1 ;)"
 
-# # STEP 2: EVENTS
-# ## a.) Copies behavioral logfiles to corresponding sub & ses folder in BIDS format.
-# echo "STEP 2: Moving LOGFILES..."
-# python -m scripts.import.import_LOG "$subID" "$sesID" "$project" "$homePath"
-# echo "Completed STEP 2 ;)"
+# STEP 2: EVENTS
+# a.) Copies behavioral logfiles to corresponding sub & ses folder in BIDS format.
+echo "STEP 2: Moving LOGFILES..."
+python -m scripts.import.import_LOG "$subID" "$sesID" "$project" "$homePath"
+echo "Completed STEP 2 ;)"
 
-# # STEP 3: BIOPAC
-# ## a.) Converts sourcedata (.acq) into TAPAS-compatible data (.mat or .txt).
-# ## b.) Preprocesses the compatible data.
-# ## c.) Calculates regressors.
-# echo "STEP 3: Starting PHYSIO import..."
-# python -m scripts.import.import_PHYSIO "$subID" "$sesID" "$project" "$task" "$homePath"
-# echo "Completed STEP 3 ;)"
+# STEP 3: BIOPAC
+## a.) Converts sourcedata (.acq) into TAPAS-compatible data (.mat or .txt).
+## b.) Preprocesses the compatible data.
+## c.) Calculates regressors.
+echo "STEP 3: Starting PHYSIO import..."
+python -m scripts.import.import_PHYSIO "$subID" "$sesID" "$project" "$task" "$homePath"
+echo "Completed STEP 3 ;)"
 
 conda deactivate
