@@ -1,11 +1,18 @@
 {
-    "Name": "Localizer Test & Pilot Data for the SUBCORT_HIGHRES MRI protocol",
-    "BIDSVersion": "1.10.0",
-    "DatasetType": "raw",
-    "License": "CCO",
-    "Authors": [
-        "Monika Utroša Škerjanec",
-        "Cesar Caballero-Gaudes",
-        "Alejandro Tabas"
-    ]
+	"Name": "Localizer Pilot Data with Full-Head FOV for the SUBCORT_HIGHRES MRI Protocol",
+	"BIDSVersion": "1.9.0",
+	"DatasetType": "raw",
+	"GeneratedBy": [
+		{
+			"Name": "dcm2bids",
+			"Version": "3.2.0",
+			"CodeURL": "https://github.com/UNFmontreal/Dcm2Bids"
+		}
+	],
+	"Authors": [
+		"Monika Utroša Škerjanec",
+		"Cesar Caballero-Gaudes",
+		"Alejandro Tabas"
+	],
+	"License": "CCO"
 }

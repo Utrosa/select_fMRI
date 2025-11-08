@@ -8,7 +8,7 @@ set -eo pipefail
 source activate localizer_fMRI
 
 # Activate the correct conda environment: conda activate dcm2bids
-subID="03"
+subID="01"
 
 # STEP 0
 ## Curate the data automatically and manually (remove bad runs).
