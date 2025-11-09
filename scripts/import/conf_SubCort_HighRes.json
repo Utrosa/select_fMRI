@@ -1,5 +1,6 @@
 {
     "descriptions": [
+
         {
             "datatype": "anat",
             "suffix": "MP2RAGE",
@@ -7,6 +8,12 @@
             "criteria": {
                 "SeriesDescription": "t1_mp2rage_sag_p3_1iso_INV1",
                 "EchoTime": 0.00298
+            },
+            "sidecar_changes": {
+                "RepetitionTimePreparation": 5,
+                "RepetitionTimeExcitation": 5,
+                "InversionTime": 0.7,
+                "NumberShots": 1
             }
         },
 
@@ -17,6 +24,12 @@
             "criteria": {
                 "SeriesDescription": "t1_mp2rage_sag_p3_1iso_INV2",
                 "EchoTime": 0.00298
+            },
+            "sidecar_changes": {
+                "RepetitionTimePreparation": 5,
+                "RepetitionTimeExcitation": 5,
+                "InversionTime": 0.7,     
+                "NumberShots": 1
             }
         },
 
@@ -26,6 +39,9 @@
             "criteria": {
                 "SeriesDescription": "t1_mp2rage_sag_p3_1iso_UNI_Images",
                 "EchoTime": 0.00298
+            },
+            "sidecar_changes": {
+                "FlipAngle": 4
             }
         },
 
@@ -36,6 +52,9 @@
             "custom_entities": "task-localizer_acq-DresdenNoFat",
             "criteria": {
                 "SeriesDescription": "Dresden_1.5mm_SMS1_TR2100_noFatSat"
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -85,7 +104,8 @@
                 "SeriesDescription": "FH_Dresden_1.5mm_SMS1_TR2100_noFatSat"
             },
             "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-DresdenNoFat"
+                "IntendedFor": "id_task-localizer_acq-DresdenNoFat",
+                "TaskName": "localizer"
             }
         },
 
@@ -96,6 +116,9 @@
             "custom_entities": "task-localizer_acq-DresdenWFat",
             "criteria": {
                 "SeriesDescription": "Dresden_1.5mm_SMS1_TR2400_wFatSat"
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -145,7 +168,8 @@
                 "SeriesDescription": "FH_Dresden_1.5mm_SMS1_TR2400_wFatSat"
             },
             "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-DresdenWFat"
+                "IntendedFor": "id_task-localizer_acq-DresdenWFat",
+                "TaskName": "localizer"
             }
         },
 
@@ -156,6 +180,9 @@
             "custom_entities": "task-localizer_acq-ME1TR880_echo-01",
             "criteria": {
                 "SeriesDescription": "ME1_1.5mm_SMS2_TR880"
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -206,7 +233,8 @@
                 "SeriesDescription": "FH_ME1_1.5mm_SMS2_TR880_SBRef"
             },
             "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME1TR880_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME1TR880_echo-01",
+                "TaskName": "localizer"
             }
         },
         
@@ -218,6 +246,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS2_1.5mm_TR1600",
                 "EchoNumber": 1
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -244,6 +275,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS2_1.5mm_TR1600",
                 "EchoNumber": 2
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -270,6 +304,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS2_1.5mm_TR1600",
                 "EchoNumber": 3
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -326,7 +363,8 @@
                 "EchoNumber": 1
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1600_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1600_echo-01",
+                "TaskName": "localizer"
             }
         },
 
@@ -340,7 +378,8 @@
                 "EchoNumber": 2
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1600_echo-02"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1600_echo-02",
+                "TaskName": "localizer"
             }
 
         },
@@ -355,7 +394,8 @@
                 "EchoNumber": 3
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1600_echo-03"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1600_echo-03",
+                "TaskName": "localizer"
             }
         },
 
@@ -367,6 +407,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS3_1.5mm_TR1100",
                 "EchoNumber": 1
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -380,7 +423,6 @@
             },
             "sidecar_changes": {
                 "Units": "rad",
-                "TaskName": "localizer",
                 "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-01"
             }
         },
@@ -393,6 +435,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS3_1.5mm_TR1100",
                 "EchoNumber": 2
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -406,7 +451,6 @@
             },
             "sidecar_changes": {
                 "Units": "rad",
-                "TaskName": "localizer",
                 "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-02"
             }
         },
@@ -419,6 +463,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS3_1.5mm_TR1100",
                 "EchoNumber": 3
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -475,7 +522,8 @@
                 "EchoNumber": 1
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-01",
+                "TaskName": "localizer"
             }
         },
 
@@ -489,7 +537,8 @@
                 "EchoNumber": 2
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-02"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-02",
+                "TaskName": "localizer"
             }
 
         },
@@ -504,7 +553,8 @@
                 "EchoNumber": 3
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-03"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1100_echo-03",
+                "TaskName": "localizer"
             }
         },
 
@@ -516,6 +566,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS4_1.5mm_TR850",
                 "EchoNumber": 1
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -542,6 +595,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS4_1.5mm_TR850",
                 "EchoNumber": 2
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -568,6 +624,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS4_1.5mm_TR850",
                 "EchoNumber": 3
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -624,7 +683,8 @@
                 "EchoNumber": 1
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR850_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME3TR850_echo-01",
+                "TaskName": "localizer"
             }
         },
 
@@ -638,7 +698,8 @@
                 "EchoNumber": 2
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR850_echo-02"
+                "IntendedFor": "id_task-localizer_acq-ME3TR850_echo-02",
+                "TaskName": "localizer"
             }
 
         },
@@ -653,7 +714,8 @@
                 "EchoNumber": 3
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR850_echo-03"
+                "IntendedFor": "id_task-localizer_acq-ME3TR850_echo-03",
+                "TaskName": "localizer"
             }
         },
 
@@ -665,6 +727,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS5_1.5mm_TR700",
                 "EchoNumber": 1
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -691,6 +756,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS5_1.5mm_TR700",
                 "EchoNumber": 2
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -717,6 +785,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_SMS5_1.5mm_TR700",
                 "EchoNumber": 3
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -773,7 +844,8 @@
                 "EchoNumber": 1
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR700_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME3TR700_echo-01",
+                "TaskName": "localizer"
             }
         },
 
@@ -787,7 +859,8 @@
                 "EchoNumber": 2
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR700_echo-02"
+                "IntendedFor": "id_task-localizer_acq-ME3TR700_echo-02",
+                "TaskName": "localizer"
             }
 
         },
@@ -802,7 +875,8 @@
                 "EchoNumber": 3
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR700_echo-03"
+                "IntendedFor": "id_task-localizer_acq-ME3TR700_echo-03",
+                "TaskName": "localizer"
             }
         },
 
@@ -813,6 +887,9 @@
             "custom_entities": "task-localizer_acq-DresdenNoFat175",
             "criteria": {
                 "SeriesDescription": "Dresden_1.75mm_SMS1_TR1640_noFatSat"
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -862,7 +939,8 @@
                 "SeriesDescription": "FH_Dresden_1.75mm_SMS1_TR1640_noFatSat"
             },
             "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-DresdenNoFat175"
+                "IntendedFor": "id_task-localizer_acq-DresdenNoFat175",
+                "TaskName": "localizer"
             }
         },
 
@@ -873,6 +951,9 @@
             "custom_entities": "task-localizer_acq-DresdenWFat175",
             "criteria": {
                 "SeriesDescription": "Dresden_1.75mm_SMS1_TR1820_wFatSat"
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -922,7 +1003,8 @@
                 "SeriesDescription": "FH_Dresden_1.75mm_SMS1_TR1820_wFatSat"
             },
             "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-DresdenWFat175"
+                "IntendedFor": "id_task-localizer_acq-DresdenWFat175",
+                "TaskName": "localizer"
             }
         },
 
@@ -933,6 +1015,9 @@
             "custom_entities": "task-localizer_acq-ME1TR780_echo-01",
             "criteria": {
                 "SeriesDescription": "ME1_1.75mm_SMS2_TR780"
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -983,7 +1068,8 @@
                 "SeriesDescription": "FH_ME1_1.75mm_SMS2_TR780_SBRef"
             },
             "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME1TR780_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME1TR780_echo-01",
+                "TaskName": "localizer"
             }
         },   
 
@@ -995,6 +1081,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS2_TR1180",
                 "EchoNumber": 1
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1021,6 +1110,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS2_TR1180",
                 "EchoNumber": 2
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1047,6 +1139,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS2_TR1180",
                 "EchoNumber": 3
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1103,7 +1198,8 @@
                 "EchoNumber": 1
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1180_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1180_echo-01",
+                "TaskName": "localizer"
             }
         },
 
@@ -1117,7 +1213,8 @@
                 "EchoNumber": 2
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1180_echo-02"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1180_echo-02",
+                "TaskName": "localizer"
             }
 
         },
@@ -1132,7 +1229,22 @@
                 "EchoNumber": 3
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR1180_echo-03"
+                "IntendedFor": "id_task-localizer_acq-ME3TR1180_echo-03",
+                "TaskName": "localizer"
+            }
+        },
+
+         {
+            "id": "id_task-localizer_acq-ME3TR770_echo-01",
+            "datatype": "func",
+            "suffix": "bold",
+            "custom_entities": "task-localizer_acq-ME3TR770_echo-01",
+            "criteria": {
+                "SeriesDescription": "ME3_1.75mm_SMS3_TR770",
+                "EchoNumber": 1
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1159,6 +1271,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS3_TR770",
                 "EchoNumber": 2
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1185,6 +1300,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS3_TR770",
                 "EchoNumber": 3
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1241,7 +1359,8 @@
                 "EchoNumber": 1
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR770_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME3TR770_echo-01",
+                "TaskName": "localizer"
             }
         },
 
@@ -1255,7 +1374,8 @@
                 "EchoNumber": 2
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR770_echo-02"
+                "IntendedFor": "id_task-localizer_acq-ME3TR770_echo-02",
+                "TaskName": "localizer"
             }
 
         },
@@ -1270,7 +1390,8 @@
                 "EchoNumber": 3
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR770_echo-03"
+                "IntendedFor": "id_task-localizer_acq-ME3TR770_echo-03",
+                "TaskName": "localizer"
             }
         },
     
@@ -1282,6 +1403,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS4_TR680",
                 "EchoNumber": 1
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1308,6 +1432,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS4_TR680",
                 "EchoNumber": 2
+            },
+            "sidecar_changes": {
+                "TaskName" : "localizer"
             }
         },
 
@@ -1334,6 +1461,9 @@
             "criteria": {
                 "SeriesDescription": "ME3_1.75mm_SMS4_TR680",
                 "EchoNumber": 3
+            },
+            "sidecar_changes": {
+                "TaskName": "localizer"
             }
         },
 
@@ -1390,7 +1520,8 @@
                 "EchoNumber": 1
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR680_echo-01"
+                "IntendedFor": "id_task-localizer_acq-ME3TR680_echo-01",
+                "TaskName": "localizer"
             }
         },
 
@@ -1404,7 +1535,8 @@
                 "EchoNumber": 2
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR680_echo-02"
+                "IntendedFor": "id_task-localizer_acq-ME3TR680_echo-02",
+                "TaskName": "localizer"
             }
 
         },
@@ -1419,7 +1551,8 @@
                 "EchoNumber": 3
             },
              "sidecar_changes": {
-                "IntendedFor": "id_task-localizer_acq-ME3TR680_echo-03"
+                "IntendedFor": "id_task-localizer_acq-ME3TR680_echo-03",
+                "TaskName": "localizer"
             }
         }
     ]    

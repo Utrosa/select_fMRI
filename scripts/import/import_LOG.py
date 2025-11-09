@@ -11,7 +11,8 @@
 # scans (dicom numbers) and then replace the "run-{O2d}" with "acq-{sequenceName}".
 
 # Import python packages
-import bids, sys, shutil
+import bids, sys, shutil, os
+import pandas as pd
 
 # Import custom-made functions
 from scripts import grabber
@@ -29,9 +30,11 @@ def import_LOG(subID, sesID, project, homePath):
 	if not logfiles:
 		print(f"No logfiles found for sub-{subID:02d} ses-{sesID:02d} in {rawFold} ! :()")
 	else:
-		for lf in logfiles: 
-			print(f"\nCopying {lf.path} to {outPath}")
-			shutil.copy(lf.path, outPath)
+		for lf in logfiles:
+			print(f"\nProcessing {lf.path} and saving to {outPath}\n")
+			df = pd.read_csv(lf.path, comment='#', sep=';', engine="python", header=None)
+			out_file = os.path.join(outPath, os.path.basename(lf.path))
+			df.to_csv(out_file, sep='\t', index=False, header=False)
 
 if __name__ == "__main__":
     subID, sesID, project, homePath = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3], sys.argv[4]

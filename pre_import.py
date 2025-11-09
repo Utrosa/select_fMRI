@@ -5,8 +5,8 @@ os.system("dcm2bids_scaffold")
 
 # 1. Adjust parameters for your subject/session
 # Activate the correct conda environment: conda activate dcm2bids
-subID    = 2
-sesID    = 2
+subID    = 1
+sesID    = 1
 project  = "SubCort_HighRes"
 homePath = '/home/mutrosa/Documents/projects/select_fMRI/data_MRI/'
 
