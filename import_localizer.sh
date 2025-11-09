@@ -10,12 +10,12 @@ source activate localizer_fMRI
 
 # Subject-specific parameters
 subID=1
-sesID=3
+sesID=1
 project="SubCort_HighRes"
 task="localizer"
 homePath='/home/mutrosa/Documents/projects/select_fMRI'
-# acq_list=("DresdenNoFat" "DresdenWFat" "ME1TR880" "ME3TR1600" "ME3TR1100" "ME3TR850" "ME3TR700")
-acq_list=("DresdenNoFat175" "DresdenWFat175" "ME1TR780" "ME3TR1180" "ME3TR770" "ME3TR680")
+acq_list=("DresdenNoFat" "DresdenWFat" "ME1TR880" "ME3TR1600" "ME3TR1100" "ME3TR850" "ME3TR700")
+# acq_list=("DresdenNoFat175" "DresdenWFat175" "ME1TR780" "ME3TR1180" "ME3TR770" "ME3TR680")
 
 # STEP 0
 ## Generate sidecar files to set up the configuration files.

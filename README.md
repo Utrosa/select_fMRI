@@ -27,27 +27,27 @@ All scripts ran by main_xxx.sh are located in .../scripts except for fMRIprep pr
 
 ### 02 Importing & Preprocessing
 
-1. Run import_localizer.sh 
+1. Run: `bash import_localizer.sh ; spd-say done`
    
    Outputs:
    - raw MRI data in BIDS with background-corrected T1 images
    - text files are moved to the appropriate MRI data folder (sub-00/ses-00/func/)
    - tmp folder (deleted) with phyio files in .mat and .txt format, and preprocessed physio files
    - tapas regressors and physio data structure per session, subject, and functional sequence.
-
-TODO: integrate NORDIC denoising of functional scans
+   - denoised BOLD images (with NORDIC)
 
 2. Exclude incomplete data (e.g.: a functional scan that was interrupted) and remove any duplicate images. Refer to the laboratory log to guide the decision (the log contains info on MRI protocol flow - tracks any changes, errors, modifications, ...).
-3. Visually inspect T1 image.
+3. Visually inspect T1 image and denoised images.
+4. Add dataset_description to data_MRI/sourcedata/raw/
 
-4. Run fMRIprep_localizer.sh
+5. Run: `bash fMRIprep_localizer.sh ; spd-say done`
    - note warnings, bugs, ...
 
    Outputs:
    - preprocessed fMRI data
    - use sloppy tag for testing the pipeline (faster)
 
- 5. Delete temporary cache directories once preprocessing is successful.
+ 6. Delete temporary cache directories once preprocessing is successful.
 
 ### 03 Analysis
 
